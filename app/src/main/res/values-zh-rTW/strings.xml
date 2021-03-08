@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="UserID">帳號</string>
+    <string name="Password">密碼</string>
+    <string name="enterBtn">登入</string>
+    <string name="cleanBtn">清除</string>
+    <string name="forgotBtn">忘記密碼?</string>
+    <string name="SalaryQuery">薪資查詢</string>
+    <string name="punchIn">上班打卡</string>
+    <string name="punchOut">下班打卡</string>
+    <string name="leave">請假作業</string>
+    <string name="Order">訂購餐點</string>
+    <string name="Message">群組訊息</string>
+</resources>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name" translatable="false">soho20210308</string>
+    <string name="UserID">UserID</string>
+    <string name="Password">Password</string>
+    <string name="enterBtn">ENTER</string>
+    <string name="cleanBtn">CLEAN</string>
+    <string name="forgotBtn">Forgot Password ?</string>
+    <string name="SalaryQuery">Salary Query</string>
+    <string name="punchIn">Punch In</string>
+    <string name="punchOut">Punch Out</string>
+    <string name="leave">Leave</string>
+    <string name="Order">Order</string>
+    <string name="Message">Message</string>\
+    <string-array name="meals">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+</resources>
