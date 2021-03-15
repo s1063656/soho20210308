@@ -10,11 +10,14 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/SalaryQuery"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
@@ -25,9 +28,11 @@
 
     <ImageButton
         android:id="@+id/leave_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/leave"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
@@ -40,11 +45,15 @@
 
     <ImageButton
         android:id="@+id/in_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:layout_marginTop="24dp"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/leave"
+        android:onClick="openQRCamera"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
@@ -53,9 +62,13 @@
 
     <ImageButton
         android:id="@+id/out_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:layout_marginTop="24dp"
+        android:onClick="out_btn"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/punchOut"
         app:layout_constraintEnd_toEndOf="@+id/leave_btn"
@@ -65,8 +78,11 @@
 
     <ImageButton
         android:id="@+id/order_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:layout_marginTop="24dp"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/Order"
@@ -78,8 +94,11 @@
 
     <ImageButton
         android:id="@+id/msg_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:layout_marginTop="24dp"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/Message"
