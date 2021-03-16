@@ -10,31 +10,29 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/SalaryQuery"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:srcCompat="@drawable/salary" />
 
     <ImageButton
         android:id="@+id/leave_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/leave"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
@@ -45,15 +43,15 @@
 
     <ImageButton
         android:id="@+id/in_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/leave"
         android:onClick="openQRCamera"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
@@ -62,15 +60,15 @@
 
     <ImageButton
         android:id="@+id/out_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:onClick="out_btn"
+        android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/punchOut"
+        android:onClick="out_btn"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/leave_btn"
         app:layout_constraintStart_toStartOf="@+id/leave_btn"
         app:layout_constraintTop_toBottomOf="@+id/leave_btn"
@@ -78,15 +76,15 @@
 
     <ImageButton
         android:id="@+id/order_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/Order"
         android:onClick="order"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/in_btn"
         app:layout_constraintStart_toStartOf="@+id/in_btn"
         app:layout_constraintTop_toBottomOf="@+id/in_btn"
@@ -94,14 +92,14 @@
 
     <ImageButton
         android:id="@+id/msg_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/btn_mode"
         android:contentDescription="@string/Message"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/out_btn"
         app:layout_constraintStart_toStartOf="@+id/out_btn"
         app:layout_constraintTop_toBottomOf="@+id/out_btn"
@@ -109,43 +107,68 @@
 
     <TextView
         android:id="@+id/userInformatio"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="UserID : user001"
         android:textColor="@color/blue_28527a"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
 
     <TextView
         android:id="@+id/date"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Date : "
         android:textColor="@color/blue_28527a"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/userInformatio"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/userInformatio"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="40dp" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,8 +21,11 @@ import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
+import android.view.WindowMetrics;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -140,10 +144,11 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
 
+
             View v = getLayoutInflater().inflate(R.layout.dialog_out,null);
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setView(v)
-                    .create();
+
+            Dialog dialog = builder.setView(v).create();
             ImageView imageView = v.findViewById(R.id.iv_out);
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
@@ -157,11 +162,15 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                     dispatchTakePictureIntent();
                 }
             });
-            builder.show();
+            dialog.show();
+            Window window = dialog.getWindow();
+            WindowManager.LayoutParams lp = window.getAttributes();
+            lp.gravity = Gravity.CENTER;
+            lp.width = window.getAttributes().MATCH_PARENT;//宽高可设置具体大小
+            lp.height = window.getAttributes().MATCH_PARENT;
+            dialog.getWindow().setAttributes(lp);
+        }else {
 
-        }else
-        {
-            Toast.makeText(this,"what!!!",Toast.LENGTH_SHORT).show();
         }
     }
 
