@@ -143,11 +143,8 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-
-
             View v = getLayoutInflater().inflate(R.layout.dialog_out,null);
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
             Dialog dialog = builder.setView(v).create();
             ImageView imageView = v.findViewById(R.id.iv_out);
             Bundle extras = data.getExtras();
@@ -156,19 +153,8 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             Button re_btn = v.findViewById(R.id.re_btn),ok_btn = v.findViewById(R.id.ok_btn);
             re_btn.setEnabled(true);
             ok_btn.setEnabled(true);
-            re_btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dispatchTakePictureIntent();
-                }
-            });
+            re_btn.setOnClickListener(v1 -> dispatchTakePictureIntent());
             dialog.show();
-            Window window = dialog.getWindow();
-            WindowManager.LayoutParams lp = window.getAttributes();
-            lp.gravity = Gravity.CENTER;
-            lp.width = window.getAttributes().MATCH_PARENT;//宽高可设置具体大小
-            lp.height = window.getAttributes().MATCH_PARENT;
-            dialog.getWindow().setAttributes(lp);
         }else {
 
         }
